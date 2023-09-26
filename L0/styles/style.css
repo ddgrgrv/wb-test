@@ -1,0 +1,25 @@
+body {
+    font-family: "Segoe UI", "Arial", sans-serif;
+  }
+.header{
+    display: flex;
+    flex-direction: row;
+}
+
+.main{
+    display: flex;
+    flex-direction: row;
+}
+
+.main__child{
+    flex-basis: 50%;
+}
+
+.list-item{
+    display: flex;
+    flex-direction: row;
+}
+
+.footer{
+
+}

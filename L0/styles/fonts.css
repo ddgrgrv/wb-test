@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "Segoe UI";
+    font-style: normal;
+    font-weight: 400;
+    /* Браузер сначала попробует найти шрифт локально */
+    src: local("Segoe UI"),
+         /* Если не получилось, загрузит woff2 */
+         url("/L0/fonts/SegoeUI/Segoe\ UI.ttf") format("ttf"),
+  }
