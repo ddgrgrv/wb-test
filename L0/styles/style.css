@@ -1,10 +1,13 @@
-h2,body,p{
+h2,body,p,ul,h3{
     margin: 0;
+    padding: 0;
 }
+
 body {
     font-family: "Segoe UI", "Arial", sans-serif;
     background-color: var(--violet);
-  }
+}
+
 .header{
     display: flex;
     flex-direction: row;
@@ -48,10 +51,152 @@ body {
     flex-basis: 50%;
 }
 
+.details__summary{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--grey-border-color);
+}
+
+.details__summary::marker {
+    display:none;
+}
+
+details:not([open]) > .details__summary > img {
+    transform: rotate(180deg);
+}
+
+.summary-arrow{
+    width: 20px;
+    height: 20px;
+    float: right;
+    transition: all .3s;
+}
+
+.desc-count{
+    display: inline-block;
+}
+
+.summary-checkbox{
+    display: inline-block;
+    margin: 0;
+    width: 22px;
+    height: 22px;
+    background-color: var(--purple);
+    border: none;
+}
+
+.summary-label{
+    color: var(--black);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0px;
+}
+
 .list-item{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
 }
+
+.list-item__inner{
+    display: flex;
+    flex-direction: row;
+}
+
+.product-info{
+    display: flex;
+    flex-direction: column;
+}
+
+.counter{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100px;
+    height: 44px;
+    border-radius: 8px;
+    background-color: var(--white);
+}
+
+.counter-btn{
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+}
+
+.product-name{
+    color: var(--black);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.product-color, .product-size{
+    color: var(--black);
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+
+}
+.product-storage, .product-company{
+    color: var(--grey);
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.price-title{
+    color: var(--black);
+    font-family: Segoe UI;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: -0.01em;
+}
+
+.inner-title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.btn-change{
+    color: var(--purple);
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+}
+.group-btn{
+    border: none;
+    background-color: transparent;
+}
+
+.section{
+    background-color: var(--white);
+    border-radius: 16px;
+    margin-bottom: 16px;
+    padding: 16px 24px;
+}
+
+.recipient-input{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--grey-border-color);
+}
+
 .aside{
     background-color: var(--white);
 }
