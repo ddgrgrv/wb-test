@@ -19,7 +19,6 @@ body {
     justify-content: space-between;
     align-items: flex-end;
     padding: 17px 24px;
-    width: 1400px;
 }
 
 .header__title{
@@ -62,7 +61,7 @@ body {
     display: flex;
     flex-direction: row;
     background-color: var(--grey-background);
-    padding: 35px 24px;
+    padding: 21px 24px;
     border-radius: 24px;
 }
 
@@ -81,7 +80,7 @@ body {
     font-weight: 700;
     line-height: 36px;
     letter-spacing: -0.01em;
-    margin-bottom: 22px;
+    margin: 15px 0 26px 0;
 
 }
 .inner{
@@ -89,13 +88,16 @@ body {
     margin-right: 32px;
 }
 
+.details{
+    margin-bottom: 10px;
+}
 .details__summary{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     border-bottom: 1px solid var(--grey-border-color);
-    padding-bottom: 18px;
-    margin-bottom: 10px;
+    padding-bottom: 11px;
+    margin-bottom: 11px;
 }
 
 .details__summary::marker {
@@ -138,26 +140,38 @@ details:not([open]) > .details__summary > img {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-start;
+    /* align-items: s; */
     margin-bottom:  30px;
 }
 
 .list-item__inner{
     display: flex;
     flex-direction: row;
-    flex-basis: 40%;
+    flex-basis: 50%;
 }
 
-.price{
-    margin-left: 56px;
+.right{
+    flex-basis: 25%;
+}
+
+.list-item__img{
+    margin:0  10px 0 10px;
+    width: 72px;
+    height: 96px;
+
+}
+
+.list-item__price{
+    margin-left: 45px;
 }
 
 .product-info{
     display: flex;
     flex-direction: column;
+    width: 45%;
 }
 
-.counter{
+.list-item__counter{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -213,6 +227,10 @@ details:not([open]) > .details__summary > img {
     justify-content: space-between;
 }
 
+.btn-inner{
+    margin-right: 119px;
+}
+
 .btn-change{
     color: var(--purple);
     border: none;
@@ -230,16 +248,27 @@ details:not([open]) > .details__summary > img {
     background-color: var(--white);
     border-radius: 16px;
     margin-bottom: 16px;
-    padding: 16px 24px;
+    padding: 16px 19px;
 }
 
 .pay-content{
     display: flex;
     flex-direction: row;
+    margin-bottom: 10px;
 }
 .pay-information{
     display: flex;
     flex-direction: row;
+}
+
+.delivery__img-inner{
+    width: 100%;
+}
+
+.delivery__img{
+    width: 40px;
+    height: 56px;
+
 }
 
 .recipient-input{
@@ -253,15 +282,19 @@ details:not([open]) > .details__summary > img {
 }
 
 .aside{
-    flex-basis: 30%;
+    flex-basis: 31%;
     height: fit-content;
     background-color: var(--white);
 }
 
-.aside-item{
+.aside-item ,.delivery-content{
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-end;
+}
+
+.aside-item:first-child{
+    margin-bottom: 8px;
 }
 
 .aside-btn{
@@ -269,22 +302,84 @@ details:not([open]) > .details__summary > img {
     background-color: transparent;
 }
 
+.aside__total-price{
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 27px;
+    letter-spacing: -0.025em;
+    color: var(--black);
+}
+
+.aside-item__desc{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.subtitle{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    margin-top: 25px;
+}
+
+.aside-address{
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.aside-date{
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    color: var(--purple);
+}
+
+.aside-delivery{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px 3px 0;
+    background-color: var(--grey-background);
+    padding: 8px;
+}
+
+.card-number{
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.aside-pay{
+    background-color: var(--grey-background);
+    padding: 8px;
+    margin-bottom: 31px;
+}
+
 .price-shipping{
     color: var(--green);
     text-decoration: underline dashed;
 }
 
+.aside-delivery-icon{
+    width: 20px;
+    height: 20px;
+    margin-right: 9px;
+}
+
 .order{
     border: none;
-    border-radius: 8px;
-    padding: 20px 35px;
+    border-radius: 10px;
+    padding: 12px 156px;
     background-color: var(--purple);
     color: var(--white);
     font-size: 16px;
     font-weight: 700;
-    line-height: 24px;
+    line-height: 20px;
     letter-spacing: 0px;
     text-align: center;
+    margin-bottom: 10px;
 
 }
 

@@ -34,7 +34,7 @@
         <main class="main">
             <div class="main__child inner">
                 <h1 class="main__title">Корзина</h1>
-                <details open>
+                <details class="details" open>
                     <summary class="details__summary">
                         <div>
                             <input class="summary-checkbox" type="checkbox" name="summary-checkbox" id="">
@@ -59,13 +59,13 @@
                                         129337, Москва, улица Красная Сосна, 2, корпус 1, стр. 1, помещение 2, офис 34">i</abbr></span>
                                 </div>
                             </div>
-                            <div class="list-item__inner">
-                                <div class="counter">
+                            <div class="list-item__inner right">
+                                <div class="list-item__counter">
                                     <button class="counter-btn">-</button>
                                     <span>1</span>
                                     <button class="counter-btn">+</button>
                                 </div>
-                                <div class="price">
+                                <div class="list-item__price">
                                     <h3 class="price-title">522 сом</h3>
                                     <span>522 сом</span>
                                 </div>
@@ -86,13 +86,13 @@
                                     129337, Москва, улица Красная Сосна, 2, корпус 1, стр. 1, помещение 2, офис 34">i</abbr></span>
                             </div>
                             </div>
-                            <div class="list-item__inner">
-                                <div class="counter">
+                            <div class="list-item__inner right">
+                                <div class="list-item__counter">
                                     <button class="counter-btn">-</button>
                                     <span>1</span>
                                     <button class="counter-btn">+</button>
                                 </div>
-                                <div class="price">
+                                <div class="list-item__price">
                                     <h3 class="price-title">522 сом</h3>
                                     <span>522 сом</span>
                                 </div>
@@ -108,13 +108,13 @@
                                     <p class="product-company">OOO Вайлдберриз <abbr title="OOO">i</abbr></p>
                                 </div>
                             </div>
-                            <div class="list-item__inner">
-                                <div class="counter">
+                            <div class="list-item__inner right">
+                                <div class="list-item__counter">
                                     <button class="counter-btn">-</button>
                                     <span>1</span>
                                     <button class="counter-btn">+</button>
                                 </div>
-                                <div class="price">
+                                <div class="list-item__price">
                                     <h3 class="price-title">522 сом</h3>
                                     <span>522 сом</span>
                                 </div>
@@ -122,10 +122,9 @@
                         </li>
                     </ul>
                 </details>
-                <details open>
+                <details class="details" open>
                     <summary class="details__summary">
                         <div>
-                            <input class="summary-checkbox" type="checkbox" name="summary-checkbox" id="">
                             <label class="summary-label" for="summary-checkbox">Отсутствуют <p class="desc-count"><span class="count">3</span> товара</p></label>
                         </div> 
                         <img class="summary-arrow" src="./img/details-arrow.png" alt="">
@@ -133,11 +132,13 @@
                     <ul>
                         <li class="list-item">
                             <div class="list-item__inner">
-                                <img src="/L0/img/list-item__img_1.jpg" alt="">
+                                <img class="list-item__img" src="/L0/img/list-item__img_1.jpg" alt="">
                                 <div class="product-info">
-                                    <span>Футболка UZcotton мужская</span>
-                                    <span>Цвет: белый</span>
-                                    <span>Размер: 56</span>
+                                    <span class="product-name">Футболка UZcotton мужская</span>
+                                    <div>
+                                        <span class="product-color">Цвет: белый</span>
+                                        <span class="product-size">Размер: 56</span>
+                                    </div>
                                 </div>
                             </div>
                             <div class="btn-inner">
@@ -157,7 +158,7 @@
                         </li>
                         <li class="list-item">
                             <div class="list-item__inner">
-                                <img src="/L0/img/list-item__img-2.jpg" alt="">
+                                <img class="list-item__img" src="/L0/img/list-item__img-2.jpg" alt="">
                                 
                                 <div class="product-info">
                                     <span>Силиконовый чехол картхолдер (отверстия) для карт, прозрачный кейс бампер на Apple iPhone XR, MobiSafe</span>
@@ -181,7 +182,7 @@
                         </li>
                         <li class="list-item">
                             <div class="list-item__inner">
-                                <img src="/L0/img/list-item__img-3.jpg" alt="">
+                                <img class="list-item__img" src="/L0/img/list-item__img-3.jpg" alt="">
                                 
                                 <div class="product-info">
                                     <span>Футболка UZcotton мужская</span>
@@ -212,24 +213,26 @@
                         <button class="btn-change">Изменить</button>
                     </div>
                     <div class="delivery-content">
-                        <span>Пункт выдачи</span>
+                        <span class="subtitle">Пункт выдачи</span>
                         <p>Бишкек, улица Ахматбека Суюмбаева, 12/1
                             4.99
                             Ежедневно с 10 до 21 
                         </p>
                     </div>
                     <div class="delivery-content">
-                        <span>Стоимость доставки</span>
+                        <span class="subtitle">Стоимость доставки</span>
                         <p>Бесплатно</p>
                     </div>
                     <div class="delivery-content">
-                        <span>5—6 февраля</span>
-                        <div>
-                            <img src="" alt="">
-                            <img src="" alt="">
+                        <span class="subtitle">5—6 февраля</span>
+                        <div class="delivery__img-inner">
+                            <img class="delivery__img" src="/L0/img/list-item__img_1.jpg" alt="">
+                            <img class="delivery__img" src="/L0/img/list-item__img_2.jpg" alt="">
+                            <img class="delivery__img" src="/L0/img/list-item__img_3.jpg" alt="">
                         </div>
                     </div>
                     <div class="delivery-content">
+                        <img src="/L0/img/price-shipping-icon.png" alt="">
                         <p>Обратная доставка товаров на склад при отказе — <abbr title="Если товары вам не подойдут, мы вернем их обратно на склад — это бесплатно">бесплатно</abbr></p>
                     </div>
                 </section>
@@ -241,7 +244,7 @@
                     <div class="pay-content">
                         <img src="/L0/img/mir-icon.png" alt="">
                         <div class="pay-information">
-                            <p>1234 5611 1111 1234</p>
+                            <p class="card-number">1234 5611 1111 1234</p>
                             <p>01/30</p>
                         </div>
                     </div>
@@ -271,20 +274,24 @@
             </div>
             <aside class="main__child aside section">
                 <div class="aside-item">
-                    <h2>Итого</h2>
-                    <span>2 101 063 сом</span>
+                    <h2 class="aside__title">Итого</h2>
+                    <span class="aside__total-price">2 101 063 сом</span>
                 </div>
                 <div class="aside-item">
-                    <p>203 товара</p>
-                    <span>2 302 048 сом</span>
+                    <p class="aside-item__desc">203 товара</p>
+                    <span class="aside-item__desc">2 302 048 сом</span>
                 </div>
                 <div class="aside-item">
-                    <p>Доставка</p>
-                    <span>Бесплатно</span>
+                    <p class="aside-item__desc">Скидка</p>
+                    <span class="aside-item__desc">−200 985 сом</span>
+                </div>
+                <div class="aside-item">
+                    <p class="aside-item__desc">Доставка</p>
+                    <span class="aside-item__desc">Бесплатно</span>
                 </div>
                 <div>
                     <div class="aside-item">
-                        <h3>Доставка в пункт выдачи</h3>
+                        <h3 class="subtitle">Доставка в пункт выдачи</h3>
                         <button class="aside-btn">
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M11.1585 1.05991L14.9401 4.84154L4.72705 15.0546L0.735435 15.8529C0.385575 15.9229 0.0771149 15.6144 0.147087 15.2646L0.94541 11.273L11.1585 1.05991ZM2.17707 11.9321L11.1585 2.95072L13.0493 4.84154L4.06789 13.8229L1.70436 14.2956L2.17707 11.9321Z" fill="#CB11AB"/>
@@ -292,16 +299,16 @@
                                 </svg>
                         </button>
                     </div>
-                    <p>Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
-                    <span>5–8 фев</span>
+                    <p class="aside-address">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
+                    <span class="aside-date">5–8 фев</span>
                 </div>
-                <div>
-                    <img src="/L0/img/price-shipping-icon.png" alt="">
-                    <p>Обратная доставка товаров на склад при отказе — <span class="price-shipping">бесплатно</span> </p>
+                <div class="aside-delivery">
+                    <img class="aside-delivery-icon" src="/L0/img/price-shipping-icon.png" alt="">
+                    <p class="aside-address">Обратная доставка товаров на склад при отказе — <span class="price-shipping">бесплатно</span> </p>
                 </div>
                 <div>
                     <div class="aside-item">
-                        <h3>Оплата картой</h3>
+                        <h3 class="subtitle">Оплата картой</h3>
                         <button class="aside-btn">
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M11.1585 1.05991L14.9401 4.84154L4.72705 15.0546L0.735435 15.8529C0.385575 15.9229 0.0771149 15.6144 0.147087 15.2646L0.94541 11.273L11.1585 1.05991ZM2.17707 11.9321L11.1585 2.95072L13.0493 4.84154L4.06789 13.8229L1.70436 14.2956L2.17707 11.9321Z" fill="#CB11AB"/>
@@ -312,16 +319,18 @@
                 </div>
                 <div class="pay-content">
                     <img src="/L0/img/mir-icon.png" alt="">
-                    <p>1234 1212 1111 1234</p>
+                    <p class="card-number">1234 1212 1111 1234</p>
                 </div>
-                <div>
-                    <label for="">Списать оплату сразу</label>
-                    <input type="checkbox" name="" id="">
-                    <p>Спишем оплату с карты при получении</p>
+                <div class="aside-pay">
+                    <input class="summary-checkbox" type="checkbox" name="" id="">
+                    <label class="aside-address" for="">Списать оплату сразу</label>
+                    
+                    <p class="aside-address">Спишем оплату с карты при получении</p>
                 </div>
                 <button class="order">Заказать</button>
-                <label for="">Соглашаюсь с правилами пользования торговой площадкой и возврата
-                    <input type="checkbox" name="" id="">
+                <input type="checkbox" name="" id="">
+                <label class="aside-address" for="">Соглашаюсь с правилами пользования торговой площадкой и возврата
+                    
                 </label>
             </aside>
         </main>
