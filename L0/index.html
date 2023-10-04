@@ -34,18 +34,21 @@
         <main class="main">
             <div class="main__child inner">
                 <h1 class="main__title">Корзина</h1>
-                <details class="details" open>
+                <details class="details-top" open>
                     <summary class="details__summary">
                         <div>
-                            <input class="summary-checkbox" type="checkbox" name="summary-checkbox" id="">
-                            <label class="summary-label" for="summary-checkbox">Выбрать все</label>
+                            
+                            <label class="summary-label">
+                                <input class="summary-checkbox" type="checkbox">
+                                <span class="summary-checkbox-mask"></span>
+                                Выбрать все</label>
                         </div>
                         <img class="summary-arrow" src="./img/details-arrow.png" alt="">
                     </summary>
                     <ul>
                         <li class="list-item">
                             <div  class="list-item__inner">
-                                <input type="checkbox" name="" id="">
+                                <input class="summary-checkbox" type="checkbox" name="" id="">
                                 <img class="list-item__img" src="/L0/img/list-item__img_1.jpg" alt="">
                                 <div class="product-info">
                                     <span class="product-name">Футболка UZcotton мужская</span>
@@ -67,14 +70,14 @@
                                 </div>
                                 <div class="list-item__price">
                                     <h3 class="price-title">522 сом</h3>
-                                    <span>522 сом</span>
+                                    <span class="price-discount">1051 сом</span>
                                 </div>
                             </div>
                         </li>
                         <li class="list-item"> 
                             <div class="list-item__inner">
-                                <input type="checkbox" name="" id="">
-                            <img class="list-item__img" src="/L0/img/list-item__img-2.jpg" alt="">
+                                <input class="summary-checkbox" type="checkbox" name="" id="">
+                                <img class="list-item__img" src="/L0/img/list-item__img-2.jpg" alt="">
                             <div class="product-info">
                                 <span class="product-name">Силиконовый чехол картхолдер (отверстия) для карт, прозрачный кейс бампер на Apple iPhone XR, MobiSafe</span>
                                 <div>
@@ -89,18 +92,18 @@
                             <div class="list-item__inner right">
                                 <div class="list-item__counter">
                                     <button class="counter-btn">-</button>
-                                    <span>1</span>
+                                    <span>200</span>
                                     <button class="counter-btn">+</button>
                                 </div>
                                 <div class="list-item__price">
-                                    <h3 class="price-title">522 сом</h3>
-                                    <span>522 сом</span>
+                                    <h3 class="price-title">2 100 047 сом</h3>
+                                    <span class="price-discount">2 300 047 сом</span>
                                 </div>
                             </div>
                         </li>
                         <li class="list-item">
                             <div class="list-item__inner">
-                                <input type="checkbox" name="" id="">
+                                <input class="summary-checkbox" type="checkbox" name="" id="">
                                 <img class="list-item__img" src="/L0/img/list-item__img-3.jpg" alt="">
                                 <div class="product-info">
                                     <span class="product-name">Карандаши цветные Faber-Castell "Замок", набор 24 цвета, заточенные, шестигранные,Faber-Castell </span>
@@ -115,14 +118,14 @@
                                     <button class="counter-btn">+</button>
                                 </div>
                                 <div class="list-item__price">
-                                    <h3 class="price-title">522 сом</h3>
-                                    <span>522 сом</span>
+                                    <h3 class="price-title">495 сом</h3>
+                                    <span class="price-discount">950 сом</span>
                                 </div>
                             </div>
                         </li>
                     </ul>
                 </details>
-                <details class="details" open>
+                <details class="details-bottom" open>
                     <summary class="details__summary">
                         <div>
                             <label class="summary-label" for="summary-checkbox">Отсутствуют <p class="desc-count"><span class="count">3</span> товара</p></label>
@@ -214,26 +217,34 @@
                     </div>
                     <div class="delivery-content">
                         <span class="subtitle">Пункт выдачи</span>
-                        <p>Бишкек, улица Ахматбека Суюмбаева, 12/1
-                            4.99
-                            Ежедневно с 10 до 21 
+                        <p class="delivery-desc">Бишкек, улица Ахматбека Суюмбаева, 12/1 <br>
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.69769 1.14922C6.43817 0.528396 5.56198 0.528387 5.30244 1.14919L6.69769 1.14922ZM5.30244 1.14919L4.14719 3.90977L1.19202 4.16613C0.519264 4.22467 0.262282 5.05966 0.759713 5.49464L3.00514 7.45915L2.33207 10.3824C2.18436 11.0238 2.87792 11.5567 3.46133 11.2023L6.00032 9.65611L8.53797 11.2015C9.12269 11.5588 9.81568 11.0227 9.66861 10.3826L8.99549 7.45915L11.2402 5.49537C11.7385 5.05961 11.4793 4.22519 10.8083 4.16667L7.85294 3.91029L6.69769 1.14922" fill="#FF970D"/>
+                                </svg>
+                           <span class="delivery-schedule"> 4.99
+                            Ежедневно с 10 до 21</span> 
                         </p>
                     </div>
                     <div class="delivery-content">
                         <span class="subtitle">Стоимость доставки</span>
-                        <p>Бесплатно</p>
+                        <p class="delivery-desc">Бесплатно</p>
                     </div>
                     <div class="delivery-content">
                         <span class="subtitle">5—6 февраля</span>
-                        <div class="delivery__img-inner">
+                        <div class="delivery__img-inner delivery-desc">
                             <img class="delivery__img" src="/L0/img/list-item__img_1.jpg" alt="">
                             <img class="delivery__img" src="/L0/img/list-item__img_2.jpg" alt="">
                             <img class="delivery__img" src="/L0/img/list-item__img_3.jpg" alt="">
                         </div>
                     </div>
                     <div class="delivery-content">
-                        <img src="/L0/img/price-shipping-icon.png" alt="">
-                        <p>Обратная доставка товаров на склад при отказе — <abbr title="Если товары вам не подойдут, мы вернем их обратно на склад — это бесплатно">бесплатно</abbr></p>
+                        <span class="subtitle">7—8 февраля</span>
+                        <div class="delivery__img-inner delivery-desc">
+                            <img class="delivery__img" src="/L0/img/list-item__img_1.jpg" alt="">
+                        </div>
+                    </div>
+                    <div>
+                        <p class="aside-address"> <img src="/L0/img/price-shipping-icon.png" alt="">Обратная доставка товаров на склад при отказе — <abbr title="Если товары вам не подойдут, мы вернем их обратно на склад — это бесплатно">бесплатно</abbr></p>
                     </div>
                 </section>
                 <section class="section pay">
@@ -248,26 +259,25 @@
                             <p>01/30</p>
                         </div>
                     </div>
+                    <p class="pay-desc">Спишем оплату с карты при получении</p>
                 </section>
                 <section class="section recipient">
-                    <div>
-                        <h2 class="section__title">Получатель</h2>
-                    </div>
-                   <form action="">
-                        <label for="">
-                            <input class="recipient-input" name="name" type="text" placeholder="Имя">
+                    <h2 class="section__title">Получатель</h2>
+                   <form class="form" action="">
+                        <label class="form-label" for="name">
+                            <input id="name" class="recipient-input" name="name" type="text" placeholder="Имя">
                         </label>
-                        <label for="">
-                            <input class="recipient-input" name="surname" type="text" placeholder="Фамилия">
+                        <label class="form-label" for="">
+                            <input id="surname" class="recipient-input" name="surname" type="text" placeholder="Фамилия">
                         </label>
-                        <label for="">
-                            <input class="recipient-input" name="email" type="email" placeholder="Почта">
+                        <label class="form-label" for="">
+                            <input id="email" class="recipient-input" name="email" type="email" placeholder="Почта">
                         </label>
-                        <label for="">
-                            <input class="recipient-input" name="phone" type="tel" placeholder="Телефон">
+                        <label class="form-label" for="">
+                            <input id="phone" class="recipient-input" name="phone" type="tel" placeholder="Телефон">
                         </label>
-                        <label for="">
-                            <input class="recipient-input" name="number" type="text" placeholder="ИНН">
+                        <label class="form-label" for="">
+                            <input id="number" class="recipient-input" name="number" type="text" placeholder="ИНН">
                         </label>
                    </form>
                 </section>
@@ -289,7 +299,7 @@
                     <p class="aside-item__desc">Доставка</p>
                     <span class="aside-item__desc">Бесплатно</span>
                 </div>
-                <div>
+                <div class="aside-inner">
                     <div class="aside-item">
                         <h3 class="subtitle">Доставка в пункт выдачи</h3>
                         <button class="aside-btn">
@@ -335,7 +345,7 @@
             </aside>
         </main>
         <footer class="footer">
-            <p>© 2022  ООО «Товары и точка»</p>
+            <p class="footer-desc">© 2022  ООО «Товары и точка»</p>
         </footer>
     </div>
 </body>

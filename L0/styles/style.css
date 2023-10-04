@@ -61,7 +61,7 @@ body {
     display: flex;
     flex-direction: row;
     background-color: var(--grey-background);
-    padding: 21px 24px;
+    padding: 21px 24px 36px 24px;
     border-radius: 24px;
 }
 
@@ -88,15 +88,20 @@ body {
     margin-right: 32px;
 }
 
-.details{
-    margin-bottom: 10px;
+.details-top{
+    margin-bottom: 70px;
 }
+
+.details-bottom{
+    margin-bottom: 35px;
+}
+
 .details__summary{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     border-bottom: 1px solid var(--grey-border-color);
-    padding-bottom: 11px;
+    padding-bottom: 14px;
     margin-bottom: 11px;
 }
 
@@ -120,20 +125,28 @@ details:not([open]) > .details__summary > img {
 }
 
 .summary-checkbox{
-    display: inline-block;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.summary-checkbox-mask{
+    position: absolute;
     margin: 0;
     width: 22px;
     height: 22px;
     background-color: var(--purple);
-    border: none;
+    border-radius: 8px;
+    margin-left: -32px;
 }
 
 .summary-label{
     color: var(--black);
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 600;
     line-height: 24px;
     letter-spacing: 0px;
+    padding-left: 20px;
 }
 
 .list-item{
@@ -147,11 +160,12 @@ details:not([open]) > .details__summary > img {
 .list-item__inner{
     display: flex;
     flex-direction: row;
-    flex-basis: 50%;
+    flex-basis: 62%;
 }
 
 .right{
     flex-basis: 25%;
+    justify-content: space-between;
 }
 
 .list-item__img{
@@ -162,7 +176,7 @@ details:not([open]) > .details__summary > img {
 }
 
 .list-item__price{
-    margin-left: 45px;
+    text-align: right;
 }
 
 .product-info{
@@ -214,17 +228,26 @@ details:not([open]) > .details__summary > img {
 
 .price-title{
     color: var(--black);
-    font-family: Segoe UI;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 700;
-    line-height: 28px;
+    line-height: 24px;
     letter-spacing: -0.01em;
+}
+
+.price-discount{
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    color: var(--grey);
+    text-decoration: line-through;
+    text-decoration: underline dashed;
 }
 
 .inner-title{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: flex-start;
 }
 
 .btn-inner{
@@ -237,7 +260,7 @@ details:not([open]) > .details__summary > img {
     background-color: transparent;
     font-size: 16px;
     font-weight: 700;
-    line-height: 24px;
+    line-height: 40px;
 }
 .group-btn{
     border: none;
@@ -247,14 +270,14 @@ details:not([open]) > .details__summary > img {
 .section{
     background-color: var(--white);
     border-radius: 16px;
-    margin-bottom: 16px;
-    padding: 16px 19px;
+    margin-bottom: 15px;
+    padding: 16px 20px 16px 23px;
 }
 
 .pay-content{
     display: flex;
     flex-direction: row;
-    margin-bottom: 10px;
+    margin-bottom: 7px;
 }
 .pay-information{
     display: flex;
@@ -268,7 +291,40 @@ details:not([open]) > .details__summary > img {
 .delivery__img{
     width: 40px;
     height: 56px;
+}
 
+.pay{
+    margin-bottom: 16px;
+    padding: 16px 20px 24px 23px;
+}
+
+.pay-desc{
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    margin-top: 5px;
+}
+
+.form{
+    margin-top: 36px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 83%;
+}
+
+
+.form-label{
+    flex-basis: 32%;
+}
+
+.form-label:nth-child(-n+2){
+    flex-basis: 49%;
+}
+
+.recipient{
+    padding-bottom: 5px;
 }
 
 .recipient-input{
@@ -279,6 +335,8 @@ details:not([open]) > .details__summary > img {
     background-color: transparent;
     border: none;
     border-bottom: 1px solid var(--grey-border-color);
+    margin-bottom: 36px;
+    width: 100%;
 }
 
 .aside{
@@ -290,8 +348,22 @@ details:not([open]) > .details__summary > img {
 .aside-item ,.delivery-content{
     display: flex;
     flex-direction: row;
-    align-items: flex-end;
+    justify-content: space-between;
 }
+
+.aside-inner{
+    margin-bottom: 10px;
+}
+
+.aside-item:last-child{
+    margin-bottom: 10px;
+}
+
+.delivery-content{
+    width: 83%;
+    margin-bottom: 18px;
+}
+
 
 .aside-item:first-child{
     margin-bottom: 8px;
@@ -306,7 +378,6 @@ details:not([open]) > .details__summary > img {
     font-size: 23px;
     font-weight: 700;
     line-height: 27px;
-    letter-spacing: -0.025em;
     color: var(--black);
 }
 
@@ -320,7 +391,17 @@ details:not([open]) > .details__summary > img {
     font-size: 16px;
     font-weight: 700;
     line-height: 24px;
-    margin-top: 25px;
+    /* margin-top: 25px; */
+}
+
+.delivery-desc{
+    flex-basis: 74%;
+}
+
+.delivery-schedule{
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
 }
 
 .aside-address{
@@ -346,9 +427,10 @@ details:not([open]) > .details__summary > img {
 }
 
 .card-number{
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 400;
-    line-height: 16px;
+    line-height: 24px;
+
 }
 
 .aside-pay{
@@ -387,4 +469,12 @@ details:not([open]) > .details__summary > img {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.footer-desc{
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    color: var(--grey);
+    padding: 24px 0;
 }
