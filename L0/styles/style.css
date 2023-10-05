@@ -1,3 +1,8 @@
+*{
+    box-sizing: border-box;
+}
+
+
 h1,h2,body,p,ul,h3{
     margin: 0;
     padding: 0;
@@ -7,6 +12,7 @@ body {
     font-family: "Segoe UI", "Arial", sans-serif;
     background-color: var(--violet);
 }
+    
 
 .container{
     max-width: 1400px;
@@ -481,6 +487,7 @@ details:not([open]) > .details__summary > img {
 
 .footer{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -493,6 +500,19 @@ details:not([open]) > .details__summary > img {
     padding: 24px 0;
 }
 
+
+.mob-inner{
+    display: none;
+    width: 100%;
+    background-color: var(--grey-background);
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 14px;
+}
+
+.search-mob{
+    display: none;
+}
 @media(max-width: 1440px){
 
     .search{
@@ -530,10 +550,43 @@ details:not([open]) > .details__summary > img {
 }
 
 @media(max-width: 980px){
+    .inner{
+        margin-right: 0;
+    }
+
     .main{
         flex-direction: column;
     }
+
     .btn-inner{
         margin-right: 0;
+    }
+    
+    .list-item{
+        flex-direction: column;
+    }
+    
+    .list-item__price-mob{
+        flex-direction: row;
+        display: flex;
+    }
+
+    .mob-inner{
+        display: flex;
+    }
+    .search-mob{
+        display: block;
+    }
+
+    .user,.shop-cart, .search, .product-company, .list-item__price{
+        display: none;
+    }
+
+    .header__title{
+        width: fit-content;
+        font-size: 26px;
+        font-weight: 600;
+        line-height: 24px;
+        letter-spacing: 0.02em;
     }
 }
