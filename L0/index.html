@@ -76,9 +76,9 @@
                             </div>
                             <div class="list-item__inner right">
                                 <div class="list-item__counter">
-                                    <button id="decrement" class="counter-btn">-</button>
-                                    <span id="count">1</span>
-                                    <button id="increment" class="counter-btn">+</button>
+                                    <button id="decrement" class="counter-btn decrement">-</button>
+                                    <span id="count" class="count">1</span>
+                                    <button id="increment" class="counter-btn increment">+</button>
                                 </div>
                                 <div class="list-item__price">
                                     <h3 class="price-title">522 сом</h3>
@@ -110,9 +110,9 @@
                             </div>
                             <div class="list-item__inner right">
                                 <div class="list-item__counter">
-                                    <button id="decrement" class="counter-btn">-</button>
-                                    <span id="count">200</span>
-                                    <button id="increment" class="counter-btn">+</button>
+                                    <button id="decrement" class="counter-btn decrement">-</button>
+                                    <span id="count" class="count">200</span>
+                                    <button id="increment" class="counter-btn increment">+</button>
                                 </div>
                                 <div class="list-item__price">
                                     <h3 class="price-title">2 100 047 сом</h3>
@@ -139,9 +139,9 @@
                             </div>
                             <div class="list-item__inner right">
                                 <div class="list-item__counter">
-                                    <button id="decrement" class="counter-btn">-</button>
-                                    <span id="count">1</span>
-                                    <button id="increment" class="counter-btn">+</button>
+                                    <button id="decrement" class="counter-btn decrement">-</button>
+                                    <span id="count" class="count">1</span>
+                                    <button id="increment" class="counter-btn increment">+</button>
                                 </div>
                                 <div class="list-item__price">
                                     <h3 class="price-title">495 сом</h3>
@@ -239,7 +239,7 @@
                 <section class="section delivery">
                     <div class="inner-title">
                         <h2 class="section__title">Способ доставки</h2>
-                        <button class="btn-change">Изменить</button>
+                        <button class="btn-change js-btn-delivery">Изменить</button>
                     </div>
                     <div class="delivery-content">
                         <span class="subtitle">Пункт выдачи</span>
@@ -276,7 +276,7 @@
                 <section class="section pay">
                     <div class="inner-title">
                         <h2 class="section__title">Способ оплаты</h2>
-                        <button class="btn-change">Изменить</button>
+                        <button class="btn-change js-btn" >Изменить</button>
                     </div>
                     <div class="pay-content">
                         <img src="/L0/img/mir-icon.png" alt="">
@@ -328,7 +328,7 @@
                 <div class="aside-inner">
                     <div class="aside-item">
                         <h3 class="subtitle">Доставка в пункт выдачи</h3>
-                        <button class="aside-btn">
+                        <button class="aside-btn js-btn-delivery">
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M11.1585 1.05991L14.9401 4.84154L4.72705 15.0546L0.735435 15.8529C0.385575 15.9229 0.0771149 15.6144 0.147087 15.2646L0.94541 11.273L11.1585 1.05991ZM2.17707 11.9321L11.1585 2.95072L13.0493 4.84154L4.06789 13.8229L1.70436 14.2956L2.17707 11.9321Z" fill="#CB11AB"/>
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M13.9948 5.78715L10.2132 2.00552L11.6313 0.587402C12.4145 -0.195801 13.6843 -0.195801 14.4675 0.587402L15.4129 1.53281C16.1961 2.31601 16.1961 3.58584 15.4129 4.36904L13.9948 5.78715ZM14.4675 3.42363C14.7286 3.16256 14.7286 2.73929 14.4675 2.47822L13.5221 1.53281C13.261 1.27174 12.8378 1.27174 12.5767 1.53281L12.104 2.00552L13.9948 3.89634L14.4675 3.42363Z" fill="#CB11AB"/>
@@ -345,7 +345,7 @@
                 <div>
                     <div class="aside-item">
                         <h3 class="subtitle">Оплата картой</h3>
-                        <button class="aside-btn">
+                        <button class="aside-btn js-btn">
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M11.1585 1.05991L14.9401 4.84154L4.72705 15.0546L0.735435 15.8529C0.385575 15.9229 0.0771149 15.6144 0.147087 15.2646L0.94541 11.273L11.1585 1.05991ZM2.17707 11.9321L11.1585 2.95072L13.0493 4.84154L4.06789 13.8229L1.70436 14.2956L2.17707 11.9321Z" fill="#CB11AB"/>
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M13.9948 5.78715L10.2132 2.00552L11.6313 0.587402C12.4145 -0.195801 13.6843 -0.195801 14.4675 0.587402L15.4129 1.53281C16.1961 2.31601 16.1961 3.58584 15.4129 4.36904L13.9948 5.78715ZM14.4675 3.42363C14.7286 3.16256 14.7286 2.73929 14.4675 2.47822L13.5221 1.53281C13.261 1.27174 12.8378 1.27174 12.5767 1.53281L12.104 2.00552L13.9948 3.89634L14.4675 3.42363Z" fill="#CB11AB"/>
@@ -419,7 +419,55 @@
                 </a>
             </div>
         </footer>
+        <div class="modal-pay">
+            <div class="modal-inner">
+                <h3 class="modal-title">Способ оплаты</h3>
+                <button class="modal-close">
+                    <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.929612 13.1568C0.539088 13.5473 0.539088 14.1805 0.929612 14.571C1.32014 14.9615 1.9533 14.9615 2.34383 14.571L8.00085 8.91399L13.658 14.5711C14.0485 14.9616 14.6817 14.9616 15.0722 14.5711C15.4627 14.1806 15.4627 13.5474 15.0722 13.1569L9.41506 7.49978L15.0717 1.84309C15.4623 1.45257 15.4623 0.819403 15.0717 0.428879C14.6812 0.0383549 14.0481 0.0383553 13.6575 0.428879L8.00085 6.08557L2.34427 0.428985C1.95374 0.0384611 1.32058 0.0384608 0.930055 0.428985C0.53953 0.819509 0.539531 1.45267 0.930055 1.8432L6.58663 7.49978L0.929612 13.1568Z" fill="#9797AF"/>
+                    </svg>
+                </button>
+            </div>
+            <ul class="modal-list">
+                <li class="modal-list__item">
+                    <input class="modal-radio" type="radio" name="" id="">
+                    <img class="modal-icon" src="./img/mir-icon.png" alt="">
+                    <p class="modal-number">1234 56•• •••• 1234</p>
+                </li>
+                <li class="modal-list__item">
+                    <input class="modal-radio" type="radio" name="" id="">
+                    <img class="modal-icon" src="./img/visa-icon.png" alt="">
+                    <p class="modal-number">1234 56•• •••• 1234</p>
+                </li>
+                <li class="modal-list__item">
+                    <input class="modal-radio" type="radio" name="" id="">
+                    <img class="modal-icon" src="./img/master-icon.png" alt="">
+                    <p class="modal-number">1234 56•• •••• 1234</p>
+                </li>
+                <li class="modal-list__item">
+                    <input class="modal-radio" type="radio" name="" id="">
+                    <img class="modal-icon" src="./img/maestro-icon.png" alt="">
+                    <p class="modal-number">1234 56•• •••• 1234</p>
+                </li>
+            </ul>
+            <button class="order modal-btn">Выбрать</button>
+        </div>
+        <div class="modal-delivery">
+            <div class="modal-inner">
+                <h3 class="modal-title">Способ оплаты</h3>
+                <button class="modal-close">
+                    <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.929612 13.1568C0.539088 13.5473 0.539088 14.1805 0.929612 14.571C1.32014 14.9615 1.9533 14.9615 2.34383 14.571L8.00085 8.91399L13.658 14.5711C14.0485 14.9616 14.6817 14.9616 15.0722 14.5711C15.4627 14.1806 15.4627 13.5474 15.0722 13.1569L9.41506 7.49978L15.0717 1.84309C15.4623 1.45257 15.4623 0.819403 15.0717 0.428879C14.6812 0.0383549 14.0481 0.0383553 13.6575 0.428879L8.00085 6.08557L2.34427 0.428985C1.95374 0.0384611 1.32058 0.0384608 0.930055 0.428985C0.53953 0.819509 0.539531 1.45267 0.930055 1.8432L6.58663 7.49978L0.929612 13.1568Z" fill="#9797AF"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-delivery-btn">
+                <button class="modal-delivery__btn">В пункт выдачи</button>
+                <button class="modal-delivery__btn">Курьером</button>
+            </div>
+        </div>
     </div>
+    <div class="overlay"></div>
     <script defer src="./script.js"></script>
 </body>
 </html>
