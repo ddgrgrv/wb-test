@@ -8,11 +8,47 @@ h1,h2,body,p,ul,h3{
     padding: 0;
 }
 
+input:focus {
+    outline:none;
+}
+
+button,abbr,a{
+    cursor: pointer;
+}
+
 body {
     font-family: "Segoe UI", "Arial", sans-serif;
     background-color: var(--violet);
 }
-    
+
+/* Стилизация всплывающих подсказок */
+abbr {
+    position: relative;
+}
+abbr:hover::after {
+    position: absolute;
+    bottom: 100%;
+    left: 100%;
+    display: block;
+    padding: 16px;
+    width: 280px;
+    box-shadow: 0px 0px 1px 0px #0000004D;
+    box-shadow: 0px 2px 10px 0px #00000026;
+    background-color: var(--white);
+    color: var(--black);
+    content: attr(data-title);
+}
+
+.tooltip{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--grey);
+    border-radius: 70px;
+    width: 16px;
+    height: 16px;
+    text-decoration: none;
+}
 
 .container{
     max-width: 1400px;
@@ -101,7 +137,6 @@ body {
 
 .details-bottom{
     margin-bottom: 35px;
-    filter: grayscale(100%);
 }
 
 .details__summary{
@@ -174,6 +209,7 @@ details:not([open]) > .details__summary > img {
     display: flex;
     flex-direction: row;
     flex-basis: 62%;
+    filter: grayscale(100%);
 }
 
 .right{
@@ -331,7 +367,9 @@ details:not([open]) > .details__summary > img {
 
 
 .form-label{
+    position: relative;
     flex-basis: 32%;
+    margin-bottom: 36px;
 }
 
 .form-label:nth-child(-n+2){
@@ -350,8 +388,40 @@ details:not([open]) > .details__summary > img {
     background-color: transparent;
     border: none;
     border-bottom: 1px solid var(--grey-border-color);
-    margin-bottom: 36px;
     width: 100%;
+}
+
+.recipient-input__desc{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0px;
+}
+
+.form-span{
+    position: absolute;
+    top: -19px;
+    left: -11px;
+    display: inline-block; 
+    padding: 10px;
+    transition: 0.5s; 
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0px;
+    color: var(--grey);
+}
+/* Перемещение плейсхолдеров */
+.recipient-input:placeholder-shown ~ .form-span,
+.recipient-input:focus ~ .form-span,
+.recipient-input:valid ~ .form-span{
+    font-size: 13px;
+    transform: translateY(-12px);
+}
+
+/* Валидайия формы */
+.invalid {
+    color: var(--invalid-text);
 }
 
 .aside{
@@ -565,6 +635,10 @@ details:not([open]) > .details__summary > img {
     margin-right: 187px;   
 }
 
+.modal-number{
+    width: 100%;
+}
+
 .modal-inner{
     margin-bottom: 20px;
 }
@@ -583,12 +657,22 @@ details:not([open]) > .details__summary > img {
 .modal-delivery__btn{
     padding: 11px 62px;
     background-color: transparent;
-    border: 1px solid var(--modal-btn-border-color);
+    border: 2px solid var(--modal-btn-border-color);
+    border-radius: 20px;
 }
 .display-block{
     display: block;
 }
+/* Ховер эффекты */
+.icon-svg:hover{
+    stroke: var(--invalid-text);
+    fill: var(--invalid-text);
+}
 
+.group-btn-icon:hover{
+    fill: var(--purple);
+    stroke: var(--purple);
+}
 @media(max-width: 1440px){
 
     .search{
