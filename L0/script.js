@@ -3,8 +3,12 @@ const counterContainer = document.querySelectorAll('.list-item__counter'),
     modalDelivery = document.querySelector('.modal-delivery'),
     overlay = document.querySelector('.overlay'),
     payButtons = document.querySelectorAll('.js-btn'),
+    asideCheckboxPayAll = document.getElementById('aside-pay-all'),
     deliveryButtons = document.querySelectorAll('.js-btn-delivery'),
-    
+    mainCheckbox = document.getElementById('select-all'),
+    groupCheckbox = document.querySelectorAll('.group-checkbox'),
+    modalPayButton = document.getElementById('choose-pay'),
+    modalDeliveryButton = document.getElementById('choose-delivery'),
     sendFormButton = document.getElementById('send');
       
 function openModal(modal){
@@ -62,6 +66,44 @@ function checkValidForm(){
           }
 
 }
+
+function selectPayment(){
+  const modal = document.querySelector('.modal-pay'),
+        checkedRadioButton = modal.querySelector('.modal-radio:checked'),
+        payContent = document.querySelector('.pay-content'),
+        asidePayContent = document.querySelector('.aside-pay-icon');
+
+  if(checkedRadioButton.parentElement.querySelector('.modal-icon').src != payContent.querySelector('.pay-content__icon').src){
+    let newSrc = checkedRadioButton.parentElement.querySelector('.modal-icon').src.slice(21);
+    payContent.querySelector('.pay-content__icon').src = `${newSrc}`;
+    asidePayContent.src = `${newSrc}`;
+  }
+
+  closeModal(modalPay);
+}
+
+function selectDelivery(){
+  const modal = document.querySelector('.modal-delivery'),
+        checkedRadioButton = modal.querySelector('.modal-radio:checked');
+
+  
+  if(checkedRadioButton.parentElement.querySelector('.modal-number').textContent != document.querySelector('.delivery-desc__address').textContent){
+    document.querySelector('.delivery-desc__address').textContent = checkedRadioButton.parentElement.querySelector('.modal-number').textContent;
+    document.querySelector('.aside-delivery-desc').textContent = checkedRadioButton.parentElement.querySelector('.modal-number').textContent;
+  }
+
+  closeModal(modalDelivery);
+}
+
+function choosePayAll(){
+  if (asideCheckboxPayAll.checked) {
+    document.getElementById('send').textContent = document.querySelector('.aside__total-price').textContent;
+    document.querySelector('.aside-pay-desc').style.display = "none";
+  } else {
+    document.getElementById('send').textContent = "Заказать";
+    document.querySelector('.aside-pay-desc').style.display = "block";
+  }
+}
     
 counterContainer.forEach((item)=>{
 
@@ -117,8 +159,27 @@ sendFormButton.addEventListener('click', function(e){
     checkValidForm();
 })
 
+// Поведение чекбоксов
+for(let i=0; i<groupCheckbox.length; i++) {
+  groupCheckbox[i].onclick = function() {
+    let checkedCount = document.querySelectorAll('input.summary-checkbox:checked').length;
 
+    mainCheckbox.checked = checkedCount > 0;
+    mainCheckbox.indeterminate = checkedCount > 0 && checkedCount < groupCheckbox.length;
+  }
+}
 
+mainCheckbox.onclick = function() {
+  for(let i=0; i<groupCheckbox.length; i++) {
+    groupCheckbox[i].checked = this.checked;
+  }
+}
+
+modalPayButton.addEventListener('click', selectPayment);
+
+modalDeliveryButton.addEventListener('click', selectDelivery);
+
+asideCheckboxPayAll.addEventListener('change', choosePayAll);
 
 
          

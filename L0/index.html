@@ -44,7 +44,7 @@
                     <summary class="details__summary">
                         <div>
                             <label class="summary-label">
-                                <input class="summary-checkbox" type="checkbox">
+                                <input id="select-all" class="group-checkbox summary-checkbox" type="checkbox">
                                 <span class="summary-checkbox-mask"></span>
                                 Выбрать все</label>
                         </div>
@@ -54,7 +54,7 @@
                         <li class="list-item">
                             <div  class="list-item__inner">
                                 <label class="summary-label">
-                                    <input class="summary-checkbox" type="checkbox">
+                                    <input class="summary-checkbox group-checkbox" type="checkbox">
                                     <span class="summary-checkbox-mask"></span>
                                 </label>
                                 <img class="list-item__img" src="/L0/img/list-item__img_1.jpg" alt="">
@@ -121,7 +121,7 @@
                         <li class="list-item"> 
                             <div class="list-item__inner">
                                 <label class="summary-label">
-                                    <input class="summary-checkbox" type="checkbox">
+                                    <input class="group-checkbox summary-checkbox" type="checkbox">
                                     <span class="summary-checkbox-mask"></span>
                                 </label>
                                 <img class="list-item__img" src="/L0/img/list-item__img-2.jpg" alt="">
@@ -186,7 +186,7 @@
                         <li class="list-item">
                             <div class="list-item__inner">
                                 <label class="summary-label">
-                                    <input class="summary-checkbox" type="checkbox">
+                                    <input class="group-checkbox summary-checkbox" type="checkbox">
                                     <span class="summary-checkbox-mask"></span>
                                 </label>
                                 <img class="list-item__img" src="/L0/img/list-item__img-3.jpg" alt="">
@@ -339,7 +339,8 @@
                     </div>
                     <div class="delivery-content">
                         <span class="subtitle">Пункт выдачи</span>
-                        <p class="delivery-desc">Бишкек, улица Ахматбека Суюмбаева, 12/1 <br>
+                        <p class="delivery-desc">
+                            <span class="delivery-desc__address">Бишкек, улица Ахматбека Суюмбаева, 12/1</span> <br>
                             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M6.69769 1.14922C6.43817 0.528396 5.56198 0.528387 5.30244 1.14919L6.69769 1.14922ZM5.30244 1.14919L4.14719 3.90977L1.19202 4.16613C0.519264 4.22467 0.262282 5.05966 0.759713 5.49464L3.00514 7.45915L2.33207 10.3824C2.18436 11.0238 2.87792 11.5567 3.46133 11.2023L6.00032 9.65611L8.53797 11.2015C9.12269 11.5588 9.81568 11.0227 9.66861 10.3826L8.99549 7.45915L11.2402 5.49537C11.7385 5.05961 11.4793 4.22519 10.8083 4.16667L7.85294 3.91029L6.69769 1.14922" fill="#FF970D"/>
                                 </svg>
@@ -355,8 +356,8 @@
                         <span class="subtitle">5—6 февраля</span>
                         <div class="delivery__img-inner delivery-desc">
                             <img class="delivery__img" src="/L0/img/list-item__img_1.jpg" alt="">
-                            <img class="delivery__img" src="/L0/img/list-item__img_2.jpg" alt="">
-                            <img class="delivery__img" src="/L0/img/list-item__img_3.jpg" alt="">
+                            <img class="delivery__img" src="/L0/img/list-item__img-2.jpg" alt="">
+                            <img class="delivery__img" src="/L0/img/list-item__img-3.jpg" alt="">
                         </div>
                     </div>
                     <div class="delivery-content">
@@ -381,11 +382,11 @@
                         <button class="btn-change js-btn" >Изменить</button>
                     </div>
                     <div class="pay-content">
-                        <img src="/L0/img/mir-icon.png" alt="">
                         <div class="pay-information">
+                            <img class="pay-content__icon" src="/L0/img/mir-icon.png" alt="">
                             <p class="card-number">1234 5611 1111 1234</p>
-                            <p>01/30</p>
                         </div>
+                        <p>01/30</p>
                     </div>
                     <p class="pay-desc">Спишем оплату с карты при получении</p>
                 </section>
@@ -443,7 +444,7 @@
                                 </svg>
                         </button>
                     </div>
-                    <p class="aside-address">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
+                    <p class="aside-delivery-desc aside-address">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
                     <span class="aside-date">5–8 фев</span>
                 </div>
                 <div class="aside-delivery">
@@ -454,7 +455,6 @@
                                 <p class="hover-content__desc">Если товары вам не подойдут, мы вернем их обратно на склад — это бесплатно</p>
                             </div>
                         </span> 
-                        
                     </span>
                 </div>
                 <div>
@@ -469,16 +469,16 @@
                     </div>
                 </div>
                 <div class="pay-content">
-                    <img src="/L0/img/mir-icon.png" alt="">
+                    <img class="aside-pay-icon" src="/L0/img/mir-icon.png" alt="">
                     <p class="card-number">1234 1212 1111 1234</p>
                 </div>
                 <div class="aside-pay">
                     <label class="summary-label aside-address">
-                        <input class="summary-checkbox" type="checkbox">
+                        <input id="aside-pay-all" class="summary-checkbox" type="checkbox">
                         <span class="summary-checkbox-mask"></span>
                         Списать оплату сразу
                     </label>
-                    <p class="aside-address">Спишем оплату с карты при получении</p>
+                    <p class="aside-pay-desc aside-address">Спишем оплату с карты при получении</p>
                 </div>
                 <button id="send" class="order">Заказать</button>
                 <input type="checkbox" name="" id="">
@@ -544,27 +544,27 @@
             </div>
             <ul class="modal-list">
                 <li class="modal-list__item">
-                    <input class="modal-radio" type="radio" name="" id="">
+                    <input class="modal-radio" type="radio" name="pay-option" id="">
                     <img class="modal-icon" src="./img/mir-icon.png" alt="">
                     <p class="modal-number">1234 56•• •••• 1234</p>
                 </li>
                 <li class="modal-list__item">
-                    <input class="modal-radio" type="radio" name="" id="">
+                    <input class="modal-radio" type="radio" name="pay-option" id="">
                     <img class="modal-icon" src="./img/visa-icon.png" alt="">
                     <p class="modal-number">1234 56•• •••• 1234</p>
                 </li>
                 <li class="modal-list__item">
-                    <input class="modal-radio" type="radio" name="" id="">
+                    <input class="modal-radio" type="radio" name="pay-option" id="">
                     <img class="modal-icon" src="./img/master-icon.png" alt="">
                     <p class="modal-number">1234 56•• •••• 1234</p>
                 </li>
                 <li class="modal-list__item">
-                    <input class="modal-radio" type="radio" name="" id="">
+                    <input class="modal-radio" type="radio" name="pay-option" id="">
                     <img class="modal-icon" src="./img/maestro-icon.png" alt="">
                     <p class="modal-number">1234 56•• •••• 1234</p>
                 </li>
             </ul>
-            <button class="order modal-btn">Выбрать</button>
+            <button id="choose-pay" class="order modal-btn">Выбрать</button>
         </div>
         <div class="modal-delivery">
             <div class="modal-inner">
@@ -582,7 +582,7 @@
             <h3 class="modal-delivery__subtitle">Мои адреса</h3>
             <ul class="modal-list">
                 <li class="modal-list__item">
-                    <input class="modal-radio" type="radio" name="" id="">
+                    <input class="modal-radio" type="radio" name="modal-radio-address" id="">
                     <p class="modal-number">Бишкек, улица Табышалиева, 57</p>
                     <button class="group-btn">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -593,7 +593,7 @@
                     </button>
                 </li>
                 <li class="modal-list__item">
-                    <input class="modal-radio" type="radio" name="" id="">
+                    <input class="modal-radio" type="radio" name="modal-radio-address" id="">
                     <p class="modal-number">Бишкек, улица Жукеева-Пудовкина, 77/1</p>
                     <button class="group-btn">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -604,7 +604,7 @@
                     </button>
                 </li>
                 <li class="modal-list__item">
-                    <input class="modal-radio" type="radio" name="" id="">
+                    <input class="modal-radio" type="radio" name="modal-radio-address" id="">
                     <p class="modal-number">Бишкек, микрорайон Джал, улица Ахунбаева Исы, 67/1</p>
                     <button class="group-btn">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -615,7 +615,7 @@
                     </button>
                 </li>
             </ul>
-            <button class=" order modal-btn">Выбрать</button>
+            <button id="choose-delivery" class="order modal-btn">Выбрать</button>
         </div>
     </div>
     <div class="overlay"></div>

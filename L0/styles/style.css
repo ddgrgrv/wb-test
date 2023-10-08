@@ -625,6 +625,10 @@ details:not([open]) > .details__summary > img {
     display: none;
 }
 
+.display-none{
+    display: none;
+}
+
 /* Модальное окно */
 .overlay {
     position: fixed;
