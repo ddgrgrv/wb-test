@@ -104,11 +104,18 @@ function choosePayAll(){
     document.querySelector('.aside-pay-desc').style.display = "block";
   }
 }
+
+function updatePriceItem(element){
+  // const count = element.getElementById('count'),
+  //       price = element.getElementById('price-item');
+        console.log(element);  
+}
     
 counterContainer.forEach((item)=>{
 
     const increment = item.querySelector('.increment'),
           decrement = item.querySelector('.decrement'),
+          container = item.parentElement.parentElement.parentElement,
           counterValue = item.querySelector('.count');
 
           let count = counterValue.textContent;
@@ -116,20 +123,25 @@ counterContainer.forEach((item)=>{
           function IncreaseCounter (){
               count++;
               counterValue.textContent = count;
+              
+              updatePriceItem(container);
           }
           
-          function DecreaseCounter (){
+          function DecreaseCounter(){
+
               if (counterValue.textContent > 0) {
                   count--;
                   counterValue.textContent = count;
               } else {
                   counterValue.textContent = 0;
               }
+              updatePriceItem(container);
           }
         
           
           increment.addEventListener('click', IncreaseCounter);
           decrement.addEventListener('click', DecreaseCounter);
+          
 });
 
 payButtons.forEach((item)=>{
