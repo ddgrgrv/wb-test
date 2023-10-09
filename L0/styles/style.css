@@ -106,7 +106,7 @@ abbr:hover + .hover-content{
     font-size: 22px;
     font-weight: 700;
     line-height: 26px;
-    letter-spacing: -0.01em;
+    letter-spacing: 0.05em;
     width: 109px;
     text-transform: uppercase;
     margin-right: 28px;
@@ -119,6 +119,15 @@ abbr:hover + .hover-content{
     background-color: var(--search-background-color);
     border: none;
     margin-right: 33px;
+}
+
+.search::placeholder{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    padding-left: 20px;
+    color: var(--white);
+    letter-spacing: -0.06em;
 }
 
 .user, .shop-cart{
@@ -148,7 +157,7 @@ abbr:hover + .hover-content{
     display: flex;
     flex-direction: row;
     background-color: var(--grey-background);
-    padding: 21px 24px 51px 26px;
+    padding: 21px 24px 48px 26px;
     border-radius: 24px;
 }
 
@@ -179,7 +188,7 @@ abbr:hover + .hover-content{
 }
 
 .details-bottom{
-    margin-bottom: 35px;
+    margin-bottom: 41px;
 }
 
 .details__summary{
@@ -189,7 +198,7 @@ abbr:hover + .hover-content{
     align-items: flex-end;
     border-bottom: 1px solid var(--grey-border-color);
     padding-bottom: 17px;
-    margin-bottom: 11px;
+    margin-bottom: 10px;
 }
 
 .details__summary::marker {
@@ -261,7 +270,7 @@ details:not([open]) > .details__summary > img {
 .subtitle-big{
     font-size: 20px;
     font-weight: 700;
-    line-height: 28px;
+    line-height: 24px;
     letter-spacing: -0.01em;
 }
 
@@ -298,6 +307,11 @@ details:not([open]) > .details__summary > img {
 
 .details-bottom-mb{
     margin-bottom: 31px;
+}
+
+.details-bottom-mb:nth-child(2n){
+    padding-top: 2px;
+    margin-bottom: 28px;
 }
 
 .details-bottom__item{
@@ -342,6 +356,15 @@ details:not([open]) > .details__summary > img {
     font-weight: 400;
     line-height: 24px;
     text-align: center;
+    padding-left: 12px;
+}
+
+.count{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0px;
+    padding: 0 0 5px 4px;
 }
 
 .product-name{
@@ -400,7 +423,7 @@ details:not([open]) > .details__summary > img {
 }
 
 .btn-inner{
-    margin-right: 125px;
+    margin-right: 123px;
 }
 
 .btn-change{
@@ -414,7 +437,7 @@ details:not([open]) > .details__summary > img {
 .group-btn{
     border: none;
     background-color: transparent;
-    margin-right: 16px;
+    margin-right: 14px;
     padding: 0;
 }
 .group-btn:last-child{
@@ -424,8 +447,24 @@ details:not([open]) > .details__summary > img {
 .section{
     background-color: var(--white);
     border-radius: 16px;
-    margin-bottom: 15px;
+    margin-bottom: 19px;
     padding: 16px 24px 16px 24px;
+}
+
+.delivery{
+    padding: 16px 15px 11px 21px;
+}
+
+.delivery__title{
+    margin-bottom: 17px;
+}
+
+.pay__title{
+    margin-bottom: 17px;
+}
+
+.pay-content__icon{
+    margin-right: 5px;
 }
 
 .pay-content{
@@ -444,6 +483,7 @@ details:not([open]) > .details__summary > img {
 .delivery__img{
     width: 40px;
     height: 56px;
+    margin-right: 4px;
 }
 
 .pay{
@@ -455,7 +495,7 @@ details:not([open]) > .details__summary > img {
     font-size: 13px;
     font-weight: 400;
     line-height: 16px;
-    margin-top: 3px;
+    margin-top: 6px;
     color: var(--grey);
 }
 
@@ -477,7 +517,7 @@ details:not([open]) > .details__summary > img {
 
 .form-label:nth-child(-n+2){
     flex-basis: 49%;
-    margin-bottom: 36px;
+    margin-bottom: 39px;
 }
 
 .recipient{
@@ -494,6 +534,7 @@ details:not([open]) > .details__summary > img {
     border: none;
     border-bottom: 1px solid var(--grey-border-color);
     width: 100%;
+    padding: 0;
 }
 
 .recipient-input__desc{
@@ -501,6 +542,7 @@ details:not([open]) > .details__summary > img {
     font-weight: 400;
     line-height: 14px;
     letter-spacing: 0px;
+    margin: 4px 0 0 7px;
 }
 
 .form-span{
@@ -533,6 +575,7 @@ details:not([open]) > .details__summary > img {
     flex-basis: 32%;
     height: fit-content;
     background-color: var(--white);
+    padding-bottom: 23px;
 }
 
 .aside-item ,.delivery-content{
@@ -567,7 +610,7 @@ details:not([open]) > .details__summary > img {
 }
 
 .delivery-info__img{
-    margin-right: 5px;
+    margin-right: 8px;
 }
 
 .delivery-info{
@@ -593,6 +636,7 @@ details:not([open]) > .details__summary > img {
     font-weight: 700;
     line-height: 33px;
     color: var(--black);
+    letter-spacing: -0.02em;
 }
 
 .aside-item__desc{
@@ -609,6 +653,8 @@ details:not([open]) > .details__summary > img {
 
 .delivery-desc{
     flex-basis: 74%;
+    padding-left: 2px;
+
 }
 
 .delivery-schedule{
@@ -637,12 +683,13 @@ details:not([open]) > .details__summary > img {
     margin: 10px 3px 25px 0;
     background-color: var(--grey-background);
     padding: 10px;
+    border-radius: 10px;
 }
 .aside-pay-content{
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-bottom: 6px;
+    margin-bottom: 12px;
 }
 .aside-pay-icon{
     margin-right: 11px;
@@ -670,8 +717,9 @@ details:not([open]) > .details__summary > img {
 
 .aside-pay{
     background-color: var(--grey-background);
-    padding: 12px 9px 6px 10px;
-    margin-bottom: 31px;
+    padding: 8px 9px 11px 10px;
+    margin-bottom: 24px;
+    border-radius: 10px;
 }
 
 .aside-span{
@@ -688,7 +736,19 @@ details:not([open]) > .details__summary > img {
 }
 
 .permition{
-    padding-left: 4px;
+    padding-left: 15px;
+}
+
+.permition-checkbox-mask{
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    margin-right: -10px;
+}
+
+.summary-checkbox:checked + .permition-checkbox-mask{
+    background-image: url(/L0/img/permition-checkbox.svg);
+    background-repeat: no-repeat;
 }
 
 .price-shipping{
@@ -848,7 +908,7 @@ details:not([open]) > .details__summary > img {
 @media(max-width: 1440px){
 
     .search{
-        width: 53.4%;
+        width: 61.4%;
     }
 
     .inner {
