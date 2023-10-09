@@ -12,12 +12,17 @@
     <div class="container">
         <header class="header">
             <nav class="menu">
-                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="menu-svg-desctop" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M10 14C10 12.8954 10.8954 12 12 12H36C37.1046 12 38 12.8954 38 14C38 15.1046 37.1046 16 36 16H12C10.8954 16 10 15.1046 10 14Z" fill="white"/>
                     <path d="M10 24C10 22.8954 10.8954 22 12 22H36C37.1046 22 38 22.8954 38 24C38 25.1046 37.1046 26 36 26H12C10.8954 26 10 25.1046 10 24Z" fill="white"/>
                     <path d="M10 34C10 32.8954 10.8954 32 12 32H36C37.1046 32 38 32.8954 38 34C38 35.1046 37.1046 36 36 36H12C10.8954 36 10 35.1046 10 34Z" fill="white"/>
                     <rect x="0.5" y="0.5" width="47" height="47" rx="7.5" stroke="white" stroke-opacity="0.45"/>
-                    </svg>
+                </svg>
+                <svg class="menu-svg-mob" width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.75 2C0.75 1.30964 1.30964 0.75 2 0.75H22C22.6904 0.75 23.25 1.30964 23.25 2C23.25 2.69036 22.6904 3.25 22 3.25H2C1.30964 3.25 0.75 2.69036 0.75 2Z" fill="white"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.75 10C0.75 9.30964 1.30964 8.75 2 8.75H22C22.6904 8.75 23.25 9.30964 23.25 10C23.25 10.6904 22.6904 11.25 22 11.25H2C1.30964 11.25 0.75 10.6904 0.75 10Z" fill="white"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.75 18C0.75 17.3096 1.30964 16.75 2 16.75H16C16.6904 16.75 17.25 17.3096 17.25 18C17.25 18.6904 16.6904 19.25 16 19.25H2C1.30964 19.25 0.75 18.6904 0.75 18Z" fill="white"/>
+                </svg>
             </nav>
             <h2 class="header__title">Товары и точка</h2>
             <input type="text" class="search" placeholder="Я ищу ...">
@@ -43,7 +48,7 @@
                 <details class="details-top" open>
                     <summary class="details__summary">
                         <div>
-                            <label class="summary-label label-padding">
+                            <label class="summary-label label-padding mob-padding">
                                 <input id="select-all" class="group-checkbox summary-checkbox" type="checkbox">
                                 <span class="summary-checkbox-mask"></span>
                                 Выбрать все</label>
@@ -55,7 +60,7 @@
                             <div  class="list-item__inner">
                                 <label class="summary-label label-padding">
                                     <input class="summary-checkbox group-checkbox" type="checkbox">
-                                    <span class="summary-checkbox-mask"></span>
+                                    <span class="summary-checkbox-mask mob-checkbox"></span>
                                 </label>
                                 <img class="list-item__img" src="/L0/img/list-item__img_1.jpg" alt="">
                                 <div class="product-info">
@@ -123,7 +128,7 @@
                             <div class="list-item__inner">
                                 <label class="summary-label label-padding">
                                     <input class="group-checkbox summary-checkbox" type="checkbox">
-                                    <span class="summary-checkbox-mask"></span>
+                                    <span class="summary-checkbox-mask mob-checkbox"></span>
                                 </label>
                                 <img class="list-item__img" src="/L0/img/list-item__img-2.jpg" alt="">
                             <div class="product-info">
@@ -189,7 +194,7 @@
                             <div class="list-item__inner">
                                 <label class="summary-label label-padding">
                                     <input class="group-checkbox summary-checkbox" type="checkbox">
-                                    <span class="summary-checkbox-mask"></span>
+                                    <span class="summary-checkbox-mask mob-checkbox"></span>
                                 </label>
                                 <img class="list-item__img" src="/L0/img/list-item__img-3.jpg" alt="">
                                 <div class="product-info">
