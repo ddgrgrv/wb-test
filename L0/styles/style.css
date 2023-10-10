@@ -587,6 +587,16 @@ details:not([open]) > .details__summary > img {
     justify-content: space-between;
 }
 
+.delivery-info-mob{
+    display: flex;
+    flex-direction: row;
+}
+
+.delivery-info__img{
+    width: 22px;
+    height: 22px;
+}
+
 .aside-item:nth-child(4n){
     margin-bottom: 25px;
 }
@@ -984,7 +994,7 @@ details:not([open]) > .details__summary > img {
 
     .main{
         flex-direction: column;
-        padding: 0 0 48px 0;
+        padding: 0 0 6px 0;
     }
     
     .menu-svg-desctop{
@@ -1148,12 +1158,13 @@ details:not([open]) > .details__summary > img {
     }
 
     .details-bottom{
-        margin-bottom: 10px;
+        margin-bottom: 13px;
         padding: 0 19px 0 10px;
     }
 
     .delivery{
-        padding: 22px 0px 11px 15px;
+        padding: 20px 0px 24px 15px;
+        margin-bottom: 11px;
     }
 
     .subtitle{
@@ -1173,6 +1184,8 @@ details:not([open]) > .details__summary > img {
 
     .delivery-content{
         flex-direction: column;
+        width: 100%;
+        margin-bottom: 20px;
     }
 
     .btn-change{
@@ -1180,7 +1193,7 @@ details:not([open]) > .details__summary > img {
     }
 
     .delivery__img-inner{
-        margin-top: 13px;
+        margin-top: 10px;
     }
 
     .delivery-content:nth-child(4n) {
@@ -1189,14 +1202,21 @@ details:not([open]) > .details__summary > img {
 
     .delivery-info-mob{
         width: 90%;
+        padding: 1px 10px 0 10px;
     }
 
     .pay{
-        padding: 12px 9px 24px 16px;
+        padding: 21px 9px 24px 16px;
         margin-bottom: 10px;
     }
+
+    .pay__title{
+        margin-bottom: 10px;
+    }
+
     .recipient{
-        padding: 21px 0 0 15px;
+        padding: 21px 0 24px 15px;
+        margin-bottom: 23px;
     }
 
     .form-label{
@@ -1208,9 +1228,43 @@ details:not([open]) > .details__summary > img {
         flex-basis: 95%;
         margin-bottom: 48px;
     }
+    
 
+    .form-label:last-child{
+        margin-bottom: 0;
+    }
     .form{
         margin-top: 27px;
     }
+    .recipient-input__desc{
+        margin: 0;
+    }
+
+    .aside__title, .aside__total-price{
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 28px;
+        letter-spacing: -0.01em;
+    }
     
+    .delivery__title{
+        margin-bottom: 14px;
+    }
+
+    .aside {
+        padding: 0px 17px 16px 16px;
+        background-color: transparent;
+    }
+
+    .aside-inner, .aside-pay-content, .aside-item-pay{
+        display: none;
+    }
+    
+    .aside-item:nth-child(4n){
+        margin-bottom: 16px;
+    }
+
+    .aside-delivery{
+        margin-bottom: 16px;
+    }
 }
