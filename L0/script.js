@@ -87,11 +87,10 @@ function selectDelivery(){
         checkedRadioButton = modal.querySelector('.modal-radio:checked');
 
   
-  if(checkedRadioButton.parentElement.querySelector('.modal-number').textContent != document.querySelector('.delivery-desc__address').textContent){
-    document.querySelector('.delivery-desc__address').textContent = checkedRadioButton.parentElement.querySelector('.modal-number').textContent;
-    document.querySelector('.aside-delivery-desc').textContent = checkedRadioButton.parentElement.querySelector('.modal-number').textContent;
+  if(checkedRadioButton.parentElement.textContent != document.querySelector('.delivery-desc__address').textContent){
+    document.querySelector('.delivery-desc__address').textContent = checkedRadioButton.parentElement.textContent;
+    document.querySelector('.aside-delivery-desc').textContent = checkedRadioButton.parentElement.textContent;
   }
-
   closeModal(modalDelivery);
 }
 
