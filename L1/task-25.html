@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button id="btn">Создать новый элемент!</button>
+    </div>
+<script defer>
+    const button = document.getElementById('btn');
+    function createAndStyleElement(tagName, styles) {
+        // Создаем новый элемент
+        let newElement = document.createElement(tagName);
+        
+        // Устанавливаем стили с помощью CSS
+        for (let property in styles) {
+            if (styles.hasOwnProperty(property)) {
+                newElement.style[property] = styles[property];
+            }
+        }
+        
+        // Добавляем элемент в DOM (например, в конец body)
+        document.body.appendChild(newElement);
+        newElement.textContent = 'Новый элемент!';
+
+        return newElement;
+    }
+
+    // Пример использования
+    const styles = {
+        width: '200px',
+        height: '200px',
+        backgroundColor: 'blue',
+        color: 'white',
+        textAlign: 'center',
+        lineHeight: '200px'
+    };
+
+    button.addEventListener('click', ()=>{
+        createAndStyleElement('div',styles)
+    });
+</script>    
+</body>
+
+</html>
