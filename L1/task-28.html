@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <template id="template">
+        <div class="item">
+            <h2></h2>
+            <p></p>
+        </div>
+    </template>
+    
+    <div id="container"></div>
+    
+    <script>
+        function createAndAppendElement(title, content) {
+            // Получаем содержимое шаблона
+            const template = document.getElementById('template');
+            const clone = document.importNode(template.content, true);
+    
+            // Устанавливаем значения для заголовка и содержимого
+            const titleElement = clone.querySelector('h2');
+            const contentElement = clone.querySelector('p');
+            titleElement.textContent = title;
+            contentElement.textContent = content;
+    
+            // Добавляем элемент в DOM
+            const container = document.getElementById('container');
+            container.appendChild(clone);
+        }
+    
+        // Пример использования функции
+        createAndAppendElement('Заголовок', 'Содержимое элемента.');
+    </script>
+    
+</body>
+</html>
