@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=3b9b76e5-b9e4-4a91-b9b1-4ea9d776165c&lang=ru_RU" type="text/javascript"></script>
+    <title>Геокодинг адреса</title>
+</head>
+<body>
+    <span id="aw">Адрес: <span id="address"></span></span>
+    <div id="map" style="width: 100%; height: 400px"></div>
+
+    <script>
+        ymaps.ready(init);
+        function init() {
+
+    var myMap = new ymaps.Map("map", {
+        center: [56, 37],
+        zoom: 8
+    });
+
+    var geolocation = ymaps.geolocation;
+
+    geolocation.get({
+        // Выставляем опцию для определения положения по ip
+        provider: 'yandex',
+        // Карта автоматически отцентрируется по положению пользователя.
+        mapStateAutoApply: true,
+        // Включим автоматическое геокодирование результата.
+        autoReverseGeocode: true
+    }).then(function (result) {
+
+        // Выведем результат геокодирования.
+        myMap.geoObjects.add(result.geoObjects);
+
+        var address = result.geoObjects.get(0).properties.get('text');
+        document.getElementById('address').innerText = address;
+
+        // Выведем в консоль результат геокодирования.
+        console.log(result.geoObjects.get(0).properties.get('metaDataProperty'));
+
+    });
+}
+    </script>
+</body>
+</html>

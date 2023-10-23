@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VK Посты Виджет</title>
+    <style>
+        #post-widget {
+            width: 300px;
+            height: 400px;
+            overflow-y: scroll;
+        }
+    </style>
+</head>
+<body>
+    <div id="post-widget"></div>
+
+    <script>
+        async function fetchPosts(offset = 0) {
+            try {
+                const response = await fetch(`https://api.vk.com/method/wall.get?owner_id=-1&count=10&offset=0&access_token=d3yOJfHroaSCK1hlPpmM&v=5.131`);
+                const data = await response.json();
+                res.json(data.response.items);
+            } catch (error) {
+                res.status(500).json({ error: 'Ошибка при получении данных' });
+            }
+        }
+
+        async function renderPosts() {
+            let offset = 0;
+            let posts = [];
+            const postWidget = document.getElementById('post-widget');
+
+            while (true) {
+                const newPosts = await fetchPosts(offset);
+                if (newPosts.length === 0) {
+                    break;
+                }
+
+                posts = posts.concat(newPosts);
+                offset += newPosts.length;
+
+                // Кэширование данных в localStorage
+                localStorage.setItem('cachedPosts', JSON.stringify(posts));
+
+                // Отображение постов в виджете
+                postWidget.innerHTML = posts.map(post => `<div>${post.text}</div>`).join('');
+
+                // Прокрутка до конца виджета
+                postWidget.scrollTop = postWidget.scrollHeight;
+            }
+        }
+
+        // Проверка, есть ли кэшированные данные в localStorage
+        const cachedPosts = localStorage.getItem('cachedPosts');
+        if (cachedPosts) {
+            // Если есть, отобразить их сразу
+            document.getElementById('post-widget').innerHTML = JSON.parse(cachedPosts).map(post => `<div>${post.text}</div>`).join('');
+        } else {
+            // Иначе загрузить данные из API VK и отобразить их
+            renderPosts();
+        }
+    </script>
+</body>
+</html>
