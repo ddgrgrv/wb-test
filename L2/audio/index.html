@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Музыкальный плеер с визуализацией</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="player">
+        <div id="waveform"></div>
+        <div id="controls">
+            <button id="play-pause">Play</button>
+            <input type="range" id="volume-bar" min="0" max="1" step="0.01">
+            <button id="random-button">Random</button>
+            <button id="repeat-button">Repeat</button>
+            <span id="current-time">0:00</span> / <span id="total-duration">0:00</span>
+            <input type="range" id="seek-bar" min="0" max="100" step="0.01">
+        </div>
+        <select id="playlist"></select>
+    </div>
+    <script src="https://unpkg.com/wavesurfer.js@7"></script>
+    <script src="./script.js"></script>
+</body>
+</html>

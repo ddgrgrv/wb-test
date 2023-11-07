@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор калорий</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <h1>Калькулятор калорий</h1>
+    <label for="productName">Название продукта:</label>
+    <input type="text" id="productName">
+    <label for="calories">Калорийность:</label>
+    <input type="number" id="calories">
+    <button onclick="addProduct()">Добавить продукт</button>
+
+    <h2>Список продуктов</h2>
+    <input type="text" id="filter" placeholder="Фильтр по названию">
+    <button onclick="filterProducts()">Применить фильтр</button>
+    <button onclick="resetFilter()">Сбросить фильтр</button>
+    <button onclick="sortProducts()">Сортировать по калорийности</button>
+    <ul id="productList"></ul>
+
+    <h2>Учет съеденных калорий за день</h2>
+    <p>Потребленные калории: <span id="totalCalories">0</span></p>
+    <label for="dailyGoal">Целевые калории на день:</label>
+    <input type="number" id="dailyGoal">
+    <button onclick="setDailyGoal()">Установить цель</button>
+    <p id="warningMessage"></p>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>

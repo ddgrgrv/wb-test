@@ -1,0 +1,56 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f0f0f0;
+}
+
+#player {
+  width: 70%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#waveform {
+  width: 100%;
+  height: 200px;
+  margin: 20px 0;
+}
+
+#controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#play-pause, #random-button, #repeat-button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+#play-pause:hover, #random-button:hover, #repeat-button:hover {
+  background-color: #2980b9;
+}
+
+#seek-bar, #volume-bar {
+  width: 100%;
+  margin: 0 10px;
+}
+
+#current-time, #total-duration {
+  margin: 0 10px;
+}
+
+#playlist {
+  width: 100%;
+  margin: 20px 0;
+  padding: 10px;
+}

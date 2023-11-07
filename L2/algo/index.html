@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Визуализация алгоритмов сортировки</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="controls">
+        <label for="array-size">Размер массива:</label>
+        <input type="number" id="array-size" min="5" max="100" value="30">
+        <label for="sort-algorithm">Выберите алгоритм сортировки:</label>
+        <select id="sort-algorithm">
+            <option value="bubble">Сортировка пузырьком</option>
+            <option value="quick">Быстрая сортировка</option>
+            <option value="insertion">Сортировка вставками</option>
+            <option value="selection">Сортировка выбором</option>
+            <option value="merge">Сортировка слиянием</option>
+        </select>
+        <button id="start-button">Старт</button>
+        <button id="stop-button">Стоп</button>
+    </div>
+    <div id="visualization">
+        <div id="bars"></div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
